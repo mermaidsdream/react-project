@@ -8,7 +8,10 @@
 
 // --- Solution ---
 
-function partialAny(...) {
-
-   return;
+function partialAny(fn, ...arg1) {
+  return function(...arg2){
+    return fn(...arg1.map(function(el) {
+      return (el === undefined) ? arg2.shift() : el;
+  }), ...arg2);
+ }
 }
