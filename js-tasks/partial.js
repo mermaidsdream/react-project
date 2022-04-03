@@ -26,7 +26,8 @@
 
 // --- Solution ---
 
-function partial(...) {
-  
- return;
+function partial(fn, ...arg1) {
+  return function(...arg2) {
+    return fn(...arg1, ...arg2);
+  }
 }
