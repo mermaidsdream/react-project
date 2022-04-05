@@ -9,7 +9,7 @@
 // Аналог из lodash: http://lodash.com/docs#filter В новых браузерах у массивов есть метод filter.
 
 // --- Solution ---
-
+//тут надо поменять
 function filter(arr, fn) {
   let result = arr.filter(function(n){return fn(n)});
 
