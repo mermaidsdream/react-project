@@ -13,5 +13,10 @@
 // --- Solution ---
 
 function map(fn, array) {
-  return array.map(el => fn(el));
+  let newArr = [];
+    
+  for (let i = 0; i < array.length; i++) {
+        newArr.push(fn(array[i]));
+  }   
+  return newArr;
 }
