@@ -11,7 +11,13 @@
 // --- Solution ---
 
 function filter(arr, fn) {
-  let result = arr.filter(function(n){return fn(n)});
-
-  return result;
+  let newArr = [];
+  
+  for (let i = 0; i < arr.length; i++) {
+    if (fn(arr[i])) {
+      newArr.push(arr[i]);
+    }
+  }
+    
+  return newArr;
 }
