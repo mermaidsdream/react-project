@@ -13,6 +13,8 @@
 
 // --- Solution ---
 
-function bind(fn, context) {
-  return fn.bind(context);
+function bind(fn, ...context) {
+  return function(...arg) {
+    return fn.call(...context, ...arg);
+  }
 }
